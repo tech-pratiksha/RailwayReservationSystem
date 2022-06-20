@@ -1,0 +1,123 @@
+<form (ngSubmit)="getTrainDetails()">
+  <div class="from-row">
+    <div class="text-center">
+      <h3>
+    <label for="inputArrived">Source Station:</label><br>
+    <input type="search" class="form-label"[(ngModel)]="fromFilter"[ngModelOptions]="{standalone:true}"><br>
+    <label for="inputArrived">Destination Station:</label><br>
+    <input type="search" class="form-label"[(ngModel)]="toFilter"[ngModelOptions]="{standalone:true}"><br>
+  </h3>
+  </div>
+</div>
+  </form>
+<table class="table mt-3">
+  <thead>
+    <tr>
+      <th scope="col">TrainId</th>
+        <th scope="col">TrainName</th>
+        <th scope="col">TrainType</th>
+        <th scope="col">SourceStation</th>
+        <th scope="col">DestinationStation</th>
+        <th scope="col">ArrivalTime</th>
+        <th scope="col">DepartureTime</th>
+        <th scope="col">Distance</th>
+        <th scope="col">TrainCharges</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of TrainDetails | from:fromFilter|tO:toFilter">
+        <td>{{row.trainId}}</td>
+        <td>{{row.trainName}}</td>
+        <td>{{row.trainType}}</td>
+        <td>{{row.sourceStation}}</td>
+        <td>{{row.destinationStation}}</td>
+        <td>{{row.arrivalTime}}</td>
+        <td>{{row.departureTime}}</td>
+        <td>{{row.distance}}</td>
+        <td>{{row.trainCharges}}</td>
+      <td>
+        <button class="btn btn-info" routerLink="/trainbooking">Book Now</button>
+    </tbody>
+  </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <h2 style="text-align: center; padding-top: 1%; font-weight: bold; color: crimson;">---TRAIN DETAILS---</h2>
+<hr> -->
+<!-- <div class="container TrainDetails">
+<form>
+  <div class="from-row">
+    <label for="inputArrived">From:</label>
+    <input type="search" class="form-control"[(ngModel)]="fromFilter"[ngModelOptions]="{standalone:true}">
+    <label for="inputArrived">TO:</label>
+    <input type="search" class="form-control"[(ngModel)]="toFilter"[ngModelOptions]="{standalone:true}">
+  </div>
+  </form>
+<div class="table-container">
+<table class="table ">
+    <thead>
+      <tr>
+        <th >TrainId</th>
+        <th >TrainName</th>
+        <th >TrainType</th>
+        <th >From</th>
+        <th >TO </th>
+        <th>ArrivalTime</th>
+        <th >DepartureTime</th>
+        <th >Distance</th>
+        <th >TrainCharges</th>
+        
+    </tr>
+</thead>
+<tbody>
+  <tr *ngFor="let f of traindetails$  | async| from:fromFilter|tO:toFilter">
+    <td>{{f.fbs_TrainId}}</td>
+    <td>{{f.fbs_TrainName}}</td>
+    <td>{{f.fbs_TrainType}}</td>
+    <td>{{f.fbs_From}}</td>
+    <td>{{f.fbs_TO}}</td>
+    <td>{{f.fbs_ArrivalTime}}</td>
+    <td>{{f.fbs_DepartureTime}}</td>
+    <td>{{f.fbs_Distance}}</td>
+    <td>{{f.fbs_TrainCharges}}</td>
+   <td><button type="button" class="btn btn-success" routerlink="/trainbooking">BOOK NOW</button></td> -->
+  <!-- <td >
+    <a routerLink="trainbooking" class="bookingdetails">Book Now</a>
+  </td>
+  </tr>
+    </tbody>
+  </table>
+  </div>
+</div> --> 
+
+

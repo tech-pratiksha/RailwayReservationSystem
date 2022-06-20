@@ -1,0 +1,121 @@
+
+<!-- <section class="home">
+    <img src="../../assets/train.jpg">
+ <div class="container">
+    <h4 style="color:white; background-color: rgb(12, 95, 128); padding: 4px; text-align:center; margin-top: 3px; ">User Registration </h4>
+    <form [formGroup]="registerForm" (ngSubmit)="register()">
+        <label style="color:white" for="name;">Passenger Id</label>
+            <div>
+                <input formControlName = "myPassengerId" class="form-control" type="pid"  id="PId">
+            </div>    
+        <label style="color:white" for="name;">First Name</label>
+            <div>
+                <input type="name" formControlName="myFirstName" class="form-control" id="Fname">
+            </div>
+            <label style="color:white" for="name">Last Name</label>
+            <div>
+                <input type="name" formControlName="myLastName" class="form-control" id="Lname">
+            </div>
+            <label style="color:white" for="emailid">Email</label>
+            <div>
+                <input type="email" formControlName="myEmail" class="form-control" id="emailid">
+            </div>
+            <label style="color:white" for="name">Password</label>
+            <div>
+                <input type="password" formControlName="myPassword" class="form-control" id="password">
+            </div>
+            <label style="color:white" for="Gender">Gender</label>
+            <div>
+                <input type="Gender" formControlName="myGender" class="form-control" id="gender">
+            </div>
+            <label style="color:white" for="Age">Age</label>
+            <div>
+                <input type="text" formControlName="myAge" class="form-control" id="age">
+            </div>
+            <label style="color:white" for="phone">Phone Number</label>
+            <div>
+                <input type="tel" formControlName="myPhoneNumber" class="form-control" id="number">
+            </div>
+            
+            
+            
+            
+            <br>
+            <div>
+                <input type="submit" value="Submit Now">
+                
+                < <button type="button" class="btn btn-success" routerLink="/login">Submit</button>
+            
+            </div>
+        </form>
+            <br>
+            <br>
+    </div>
+</section> --> 
+
+
+
+<div class="container">
+    <div class="row">    
+        <div class="col-md-6">    
+            <div class="card">    
+                <div class="text-center">    
+                     <h1>Register</h1>    
+                    <h5>Feel Free to Register</h5><hr> 
+                </div>
+                <form [formGroup]="registerForm" (ngSubmit)="register()">
+                    <!-- <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">PassengerId</label>
+                        <input formControlName="PassengerId" type="number" class="form-control" id="pid" placeholder="PassengerId">
+                        <span class="text-danger" *ngIf="registerForm.controls['PassengerId'].dirty && registerForm.hasError('required','PassengerId')">*PassengerId is required</span> 
+                    </div> -->
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">FirstName</label>
+                        <input formControlName="FirstName" type="text" class="form-control" id="Fname" placeholder="FirstName"> 
+                        <span class="text-danger" *ngIf="registerForm.controls['FirstName'].dirty && registerForm.hasError('required','FirstName')">
+                            *FirstName is required</span> 
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">LastName</label>
+                        <input formControlName="LastName" type="text" class="form-control" id="Lname" placeholder="LastName"> 
+                        <span class="text-danger" *ngIf="registerForm.controls['LastName'].dirty && registerForm.hasError('required','LastName')">
+                            *LastName is required</span> 
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">EmailId</label>
+                        <input formControlName="EmailId" type="text" class="form-control" id="emailid" placeholder="EmailId"> 
+                        <span class="text-danger" *ngIf="registerForm.controls['EmailId'].dirty && registerForm.hasError('required','EmailId')">
+                            *Email is required</span> 
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input formControlName="Password" type="password" class="form-control" id="password" placeholder="Password"> 
+                        <span class="text-danger" *ngIf="registerForm.controls['Password'].dirty && registerForm.hasError('required','Password')">
+                            *Password is required</span> 
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Gender</label>
+                        <input formControlName="Gender" type="text" class="form-control" id="gender" placeholder="Gender"> 
+                        <span class="text-danger" *ngIf="registerForm.controls['Gender'].dirty && registerForm.hasError('required','Gender')">
+                            *Gender is required</span> 
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Age</label>
+                        <input formControlName="Age" type="number" class="form-control" id="age" placeholder="Age"> 
+                        <span class="text-danger" *ngIf="registerForm.controls['Age'].dirty && registerForm.hasError('required','Age')">
+                            *Age is required</span> 
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">MobileNumber</label>
+                        <input formControlName="MobileNumber" type="text" class="form-control" id="number" placeholder="MobileNumber"> 
+                        <span class="text-danger" *ngIf="registerForm.controls['MobileNumber'].dirty && registerForm.hasError('required','MobileNumber')">
+                            *MobileNumber is required</span> 
+                    </div>
+                    
+                    <button type="submit" [disabled]="!registerForm.valid"  class="btn btn-primary" >Register</button>
+                  </form> 
+                  <a routerLink="/login">Already Registered ? click to login !</a>                     
+            </div>    
+        </div>    
+    </div>    
+</div>

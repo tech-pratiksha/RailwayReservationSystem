@@ -1,0 +1,30 @@
+
+p{margin:0; padding:2px;}
+.contwrapper
+{
+   border:3px solid #FECE6E; 
+   width:95%;
+   margin:25px;
+}
+
+.routehead
+{
+   font:bold 30px calibri, arial; 
+    color:#000;
+    padding-left:9px;
+    text-align: center;
+   height:50px; 
+   background-color:#FECE6E;
+   
+}
+
+.content-ele
+{
+  font:20px arial; color:#333; width:89%; margin:5px; text-align:justify;
+}
+h3
+{
+  font:bold 12px arial; color:#000; margin:0; padding:0;
+}
+
+

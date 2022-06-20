@@ -1,0 +1,65 @@
+<div class="container">
+	<div class ="jumbtron py-3">
+
+	</div>
+	<div class="row">
+		<form [formGroup]="registerForm" (ngSubmit)="bookingdetails()">
+			<div class="booking-form">
+				<div class="form-checkbox">
+					<label for="roundtrip">
+						<input type="radio" id="roundtrip" name="train-type">
+						<span></span>AC
+					</label>
+					<label for="one-way">
+						<input type="radio" id="one-way" name="train-type">
+						<span></span>Non AC
+					</label>
+					<label for="multi-city">
+						<input type="radio" id="multi-city" name="train-type">
+						<span></span>General
+					</label>
+				</div>
+			
+			<div class="mb-3">
+				<label for="exampleInputPassword1" class="form-label">TravellingFrom</label>
+				<input formControlName="TravellingFrom" type="text" class="form-control" id="Tfrom" placeholder="City or station"> 
+				<!-- <span class="text-danger" *ngIf="registerForm.controls['Travelling from'].dirty && registerForm.hasError('required','Travelling from')">
+					*Travelling from is required</span>  -->
+			</div>
+			<div class="mb-3">
+				<label for="exampleInputPassword1" class="form-label">TravellingTo</label>
+				<input formControlName="TravellingTo" type="text" class="form-control" id="Tto" placeholder="City or station"> 
+				<!-- <span class="text-danger" *ngIf="registerForm.controls['Travelling to'].dirty && registerForm.hasError('required','Travelling to')">
+					*Travelling to is required</span>  -->
+			</div>
+			<div class="mb-3">
+				<label for="exampleInputPassword1" class="form-label">DepartureDate</label>
+				<input formControlName="DepartureDate" type="text" class="form-control" id="Ddate"> 
+				<!-- <span class="text-danger" *ngIf="registerForm.controls['Departing Date'].dirty && registerForm.hasError('required','Departing Date')"></span>  -->
+			</div>
+			<div class="mb-3">
+				<label for="exampleInputPassword1" class="form-label">ReturningDate</label>
+				<input formControlName="ReturningDate" type="text" class="form-control" id="Rdate"> 
+				<!-- <span class="text-danger" *ngIf="registerForm.controls['Returning Date'].dirty && registerForm.hasError('required','Returning Date')"></span>  -->
+			</div>
+			<div class="col-md-3">
+				<div class="form-group">
+					<label for="exampleInputPassword1" class="form-label">Adults</label>
+						<input type="number" formControlName="Adults" class="form-control" id="adults">
+					<span class="select-arrow"></span>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="form-group">
+					<label for="exampleInputPassword1" class="form-label">Children</label>
+					<input formControlName="Children" type="number" class="form-control" id="children">
+					<span class="select-arrow"></span>
+				</div>
+			</div>
+			<div class="form-group">
+				<button class="btn btn-info btn-lg btn-block" type="submit" [disabled]="registerForm.invalid" >Book Train</button>
+			</div>
+			</div>
+		</form>
+	</div>
+</div>
